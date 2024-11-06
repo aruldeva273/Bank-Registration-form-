@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Bank Account</title>
+    
+</head>
+<center>
+<body>
+    <h2 style="text-align: center;">Create Bank Account</h2>
+    <fieldset>
+    <form action="/submit_account" method="post" enctype="multipart/form-data">
+        <h3>Bank Details</h3>
+        <table>
+            <tr>
+                <h4>Bank Name: State Bank of India</h4>
+                <h4>Branch: Ponamalle,Chennai</h4>
+            </tr>
+        </table>
+        <h3>Personal Details</h3>
+        
+        <table>
+            <tr>
+                <td><label for="fullName">Full Name:</label></td>
+                <td><input type="text" id="fullName" name="fullName" required></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" required></td>
+            </tr>
+            <tr>
+                <td><label for="parentName">Father Name:</label></td>
+                <td><input type="text" id="parentName" name="parentName" required></td>
+            </tr>
+            <tr>
+                <td><label for="motherName">Mother Name:</label></td>
+                <td><input type="text" id="motherName" name="motherName" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required></td>
+            </tr>
+            <tr>
+                <td><label for="PanCard">PAN Number:</label></td>
+                <td><input type="text" id="PanCard" name="PanCard" required></td>
+            </tr>
+            <tr>
+                <td><label for="AadCard">AadharCard Number:</label></td>
+                <td><input type="tel" id="phone" name="phone" placeholder="XXXX-XXXX-XXXX-XXXX" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+        </table>
+    
+
+        <h3>Document Uploads</h3>
+        <table>
+            <tr>
+                <td><label for="identityProof">Upload your Aadhar:</label></td>
+                <td><input type="file" id="identityProof" name="identityProof" accept=".pdf, .jpg, .jpeg, .png" required></td>
+            </tr>
+            <tr>
+                <td><label for="identityProof">Upload your PanCard:</label></td>
+                <td><input type="file" id="identityProof" name="identityProof" accept=".pdf, .jpg, .jpeg, .png" required></td>
+            </tr>
+            <tr>
+                <td><label for="addressProof">Upload Your Address Proof:</label></td>
+                <td><input type="file" id="addressProof" name="addressProof" accept=".pdf, .jpg, .jpeg, .png" required></td>
+            </tr>
+            <tr>
+                <td><label for="photo">Upload Passport-size Photo:</label></td>
+                <td><input type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png" required></td>
+            </tr>
+        </table>
+
+        <h3>Account Details</h3>
+        <table>
+            <tr>
+                <td><label for="accountType">Account Type:</label></td>
+                <td>
+                    <select id="accountType" name="accountType" required>
+                        <option value="savings">Savings</option>
+                        <option value="checking">Checking</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="initialDeposit">Initial Deposit:</label></td>
+                <td><input type="number" id="initialDeposit" name="initialDeposit" min="0" required></td>
+            </tr>
+        </table>
+
+        <h3>Security Details</h3>
+        <table>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="confirmPassword">Confirm Password:</label></td>
+                <td><input type="password" id="confirmPassword" name="confirmPassword" required></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td><label for="choice">Do you have SBI Account Before:</label></td>
+                <td><input type="radio" id="yes" name="choice" value="yes"></td>
+                <td><label for="yes">Yes</label><br></td>
+                <td><input type="radio" id="no" name="choice" value="no"></td>
+                <td><label for="no">No</label></td><br><br>  
+            </tr>
+        </table>
+
+        
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button type="submit">Create Account</button>
+        </div>
+    </form>
+</fieldset>
+</body>
+</center>
+</html>
